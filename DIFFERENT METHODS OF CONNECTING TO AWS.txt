@@ -1,0 +1,47 @@
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CONNECTING TO AN EC2 INSTANCE WITH ITS IP ADDRESS AND KEY-PAIR IN OUR TERMINAL: [MANUAL APPROACH]
+
+0) create an ec2 instance in aws console ec2 dashboard manually.
+
+1)
+ssh ubuntu@public-ipv4-address-of vm
+
+// to connect to our ec2 instance with its public ipv4 address but throws error as key-pair file required for authentication, so permission denied.
+
+
+2)now change key_pair.pem file  permission to chmod 600 and connect by
+
+3) 
+ssh -i  pem/file/location ubuntu@ip-address
+
+// i means identity as pem-file location but this might fail as by default our pem file is too open previously but we changed permission to 600 now. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Various methods of using automation to connecrt to aws:
+
+i) USING AWS CLI:
+
+1)CONNECTING OUR AWS ACCOUNT TO OUR AWS CLI:
+
+create access key to connect ur account to aws cli in security credentials in user details.
+
+aws configure	// when asked enter access key, secret access key, region, output format
+
+// from aws cli docs learn few commands too.....
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ii) USING AWS CLOUD-FORMATION-TEMPLATES: comes under iac will be discussed later........
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+iii) USING AWS API + any 1 prog' language(python):
+
+boto3 is a vey good python module 
+
+learn basic commands for boto3 module from documentation.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,48 @@
+AWS is a cloud provider,
+
+mainly works on service model, has about 200 services.
+
+it comes under IAS [infra as service ] , PAS [platform as service]
+
+
+SO AWS DEVOPS TOP SERVICES ARE:
+
+EC2 (server)
+
+VPC [Virtual Private Cloud] // securing aws resources
+
+EBS Volumes	// attach volume to EC2, when many files are created by ec2
+
+S3 buckets		// eg: ur app reads a lot of data from external sources, files, or ur app writes much data
+
+IAM  // users with limited access with policies
+
+CloudWatch	// Monitoring and reliability, like when ec2 usage reaches threshold notify me!!
+
+with CW + lambda ,  second part of monitoring like u send alert emails to other sdes, encrypt ebs if they dont 
+
+Lamda [Serverless] vs Ec2	// eg: when a dev' creates unencrypted EBS volume, u run a lamda function which encrypts it and stopps then automatically, also lets say 100 devs make 100 EBS but waste of time u can just use lambda fxns, as while creating ec2 it asks for ubuntu os, specs etc but lambda fxns instantly create and full fill ur short term needs.
+so typically for short-term purposes
+
+Cloud Build Services like AWS code pipeline, AWS codeBuild for CI, build purposes, AWS CodeDeploy  for CD to deploy legacy features or latest features to ec2 servers for users.
+Similar to  Jenkins , github actions but restricted to AWS only.
+
+AWS Configuration Services here look configs' u made like make remedy actions here 
+
+Billing services so u can know how much ur org' spending on ec2 s3 services etc .....
+
+
+AWS KMS	key management services primarlily for privacy and security like enable encryption on S3, EBS , and like u have certificates to store securely.
+
+
+
+CloudTrail to enable operational and risk auditing  like it records API activities
+
+
+
+AWS elastic k8s services juz a manged k8s by aws.
+
+ECS is aws propeitary container service but EKS is managed k8s service.
+
+ELK (Elastic Search ) lets say to see a common error ur app throwing for last 100 days, to manage micro services.
+
